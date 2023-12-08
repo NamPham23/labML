@@ -19,8 +19,9 @@ txt = st.text_area('','')
 
 if txt != '':
   if st.button('Predict'):
-    feature_vector = encoder.Transform([txt])
+    feature_vector = encoder.transform([txt])
     label = str((medel.predict(feature_vector))[0])
+    
     st.header('Result')
     st.text(class_list[lable])
     
